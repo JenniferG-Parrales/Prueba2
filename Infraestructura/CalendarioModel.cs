@@ -30,7 +30,12 @@ namespace Infraestructura
 
         public int GetLastIndex()
         {
-            throw new NotImplementedException();
+            if (data.Count == 0)
+            {
+                return 1;
+            }
+
+            return data.Count;
         }
 
         public void Update(int index, CalendarioPrest e)

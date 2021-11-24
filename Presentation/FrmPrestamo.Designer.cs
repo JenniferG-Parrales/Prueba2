@@ -36,27 +36,25 @@ namespace Presentation
             this.btnBusquedaporEstado = new System.Windows.Forms.Button();
             this.btnBusquedaporTotalPrincipal = new System.Windows.Forms.Button();
             this.btnBusquedaporTotaldeInteres = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.columnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMontodelPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInteres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFechadePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFechadeVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMontodePagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nudPrestamos = new System.Windows.Forms.NumericUpDown();
-            this.nudTasas = new System.Windows.Forms.NumericUpDown();
-            this.nudTerminos = new System.Windows.Forms.NumericUpDown();
-            this.lblPorcentaje = new System.Windows.Forms.Label();
             this.lblAños = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblPorcentaje = new System.Windows.Forms.Label();
+            this.nudTerminos = new System.Windows.Forms.NumericUpDown();
+            this.nudTasas = new System.Windows.Forms.NumericUpDown();
+            this.nudPrestamos = new System.Windows.Forms.NumericUpDown();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.dtpFechaDePago = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaDePago = new System.Windows.Forms.Label();
+            this.lblCuota = new System.Windows.Forms.Label();
+            this.nudCuota = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrestamos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTasas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTerminos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTasas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrestamos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCuota)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPrestamos
@@ -88,7 +86,7 @@ namespace Presentation
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(296, 107);
+            this.btnAgregar.Location = new System.Drawing.Point(644, 107);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 6;
@@ -123,58 +121,6 @@ namespace Presentation
             this.btnBusquedaporTotaldeInteres.Text = "Busqueda por Total de Interes";
             this.btnBusquedaporTotaldeInteres.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnId,
-            this.ColumnEstado,
-            this.ColumnMontodelPrestamo,
-            this.ColumnInteres,
-            this.ColumnFechadePago,
-            this.ColumnFechadeVencimiento,
-            this.ColumnMontodePagar});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 149);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 150);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // columnId
-            // 
-            this.columnId.HeaderText = "Id";
-            this.columnId.Name = "columnId";
-            // 
-            // ColumnEstado
-            // 
-            this.ColumnEstado.HeaderText = "Estado";
-            this.ColumnEstado.Name = "ColumnEstado";
-            // 
-            // ColumnMontodelPrestamo
-            // 
-            this.ColumnMontodelPrestamo.HeaderText = "Monto del Prestamo";
-            this.ColumnMontodelPrestamo.Name = "ColumnMontodelPrestamo";
-            // 
-            // ColumnInteres
-            // 
-            this.ColumnInteres.HeaderText = "Interes";
-            this.ColumnInteres.Name = "ColumnInteres";
-            // 
-            // ColumnFechadePago
-            // 
-            this.ColumnFechadePago.HeaderText = "Fecha de Pago";
-            this.ColumnFechadePago.Name = "ColumnFechadePago";
-            // 
-            // ColumnFechadeVencimiento
-            // 
-            this.ColumnFechadeVencimiento.HeaderText = "Fecha de Vencimiento";
-            this.ColumnFechadeVencimiento.Name = "ColumnFechadeVencimiento";
-            // 
-            // ColumnMontodePagar
-            // 
-            this.ColumnMontodePagar.HeaderText = "Monto de Pagar";
-            this.ColumnMontodePagar.Name = "ColumnMontodePagar";
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnBusquedaporEstado);
@@ -187,6 +133,10 @@ namespace Presentation
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudCuota);
+            this.groupBox1.Controls.Add(this.lblCuota);
+            this.groupBox1.Controls.Add(this.lblFechaDePago);
+            this.groupBox1.Controls.Add(this.dtpFechaDePago);
             this.groupBox1.Controls.Add(this.lblAños);
             this.groupBox1.Controls.Add(this.lblPorcentaje);
             this.groupBox1.Controls.Add(this.nudTerminos);
@@ -197,10 +147,52 @@ namespace Presentation
             this.groupBox1.Controls.Add(this.lblTerminos);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(233, 118);
+            this.groupBox1.Size = new System.Drawing.Size(606, 118);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // lblAños
+            // 
+            this.lblAños.AutoSize = true;
+            this.lblAños.Location = new System.Drawing.Point(191, 77);
+            this.lblAños.Name = "lblAños";
+            this.lblAños.Size = new System.Drawing.Size(42, 15);
+            this.lblAños.TabIndex = 14;
+            this.lblAños.Text = "(Años)";
+            // 
+            // lblPorcentaje
+            // 
+            this.lblPorcentaje.AutoSize = true;
+            this.lblPorcentaje.Location = new System.Drawing.Point(197, 48);
+            this.lblPorcentaje.Name = "lblPorcentaje";
+            this.lblPorcentaje.Size = new System.Drawing.Size(17, 15);
+            this.lblPorcentaje.TabIndex = 13;
+            this.lblPorcentaje.Text = "%";
+            // 
+            // nudTerminos
+            // 
+            this.nudTerminos.Location = new System.Drawing.Point(71, 75);
+            this.nudTerminos.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudTerminos.Name = "nudTerminos";
+            this.nudTerminos.Size = new System.Drawing.Size(120, 23);
+            this.nudTerminos.TabIndex = 13;
+            this.nudTerminos.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // nudTasas
+            // 
+            this.nudTasas.Location = new System.Drawing.Point(71, 46);
+            this.nudTasas.Name = "nudTasas";
+            this.nudTasas.Size = new System.Drawing.Size(120, 23);
+            this.nudTasas.TabIndex = 2;
             // 
             // nudPrestamos
             // 
@@ -224,56 +216,81 @@ namespace Presentation
             0,
             0});
             // 
-            // nudTasas
+            // dgvDatos
             // 
-            this.nudTasas.Location = new System.Drawing.Point(71, 46);
-            this.nudTasas.Name = "nudTasas";
-            this.nudTasas.Size = new System.Drawing.Size(120, 23);
-            this.nudTasas.TabIndex = 2;
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(12, 136);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.RowTemplate.Height = 25;
+            this.dgvDatos.Size = new System.Drawing.Size(757, 150);
+            this.dgvDatos.TabIndex = 13;
             // 
-            // nudTerminos
+            // dtpFechaDePago
             // 
-            this.nudTerminos.Location = new System.Drawing.Point(71, 75);
-            this.nudTerminos.Name = "nudTerminos";
-            this.nudTerminos.Size = new System.Drawing.Size(120, 23);
-            this.nudTerminos.TabIndex = 13;
+            this.dtpFechaDePago.Location = new System.Drawing.Point(371, 13);
+            this.dtpFechaDePago.Name = "dtpFechaDePago";
+            this.dtpFechaDePago.Size = new System.Drawing.Size(200, 23);
+            this.dtpFechaDePago.TabIndex = 15;
             // 
-            // lblPorcentaje
+            // lblFechaDePago
             // 
-            this.lblPorcentaje.AutoSize = true;
-            this.lblPorcentaje.Location = new System.Drawing.Point(197, 48);
-            this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(17, 15);
-            this.lblPorcentaje.TabIndex = 13;
-            this.lblPorcentaje.Text = "%";
+            this.lblFechaDePago.AutoSize = true;
+            this.lblFechaDePago.Location = new System.Drawing.Point(280, 19);
+            this.lblFechaDePago.Name = "lblFechaDePago";
+            this.lblFechaDePago.Size = new System.Drawing.Size(88, 15);
+            this.lblFechaDePago.TabIndex = 16;
+            this.lblFechaDePago.Text = "Fecha De Pago:";
             // 
-            // lblAños
+            // lblCuota
             // 
-            this.lblAños.AutoSize = true;
-            this.lblAños.Location = new System.Drawing.Point(191, 77);
-            this.lblAños.Name = "lblAños";
-            this.lblAños.Size = new System.Drawing.Size(42, 15);
-            this.lblAños.TabIndex = 14;
-            this.lblAños.Text = "(Años)";
+            this.lblCuota.AutoSize = true;
+            this.lblCuota.Location = new System.Drawing.Point(280, 48);
+            this.lblCuota.Name = "lblCuota";
+            this.lblCuota.Size = new System.Drawing.Size(42, 15);
+            this.lblCuota.TabIndex = 17;
+            this.lblCuota.Text = "Cuota:";
+            // 
+            // nudCuota
+            // 
+            this.nudCuota.Location = new System.Drawing.Point(371, 46);
+            this.nudCuota.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudCuota.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCuota.Name = "nudCuota";
+            this.nudCuota.Size = new System.Drawing.Size(120, 23);
+            this.nudCuota.TabIndex = 18;
+            this.nudCuota.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // FrmPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAgregar);
             this.Name = "FrmPrestamo";
             this.Text = "FrmPrestamo";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrestamos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTasas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTerminos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTasas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrestamos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCuota)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,14 +304,6 @@ namespace Presentation
         private System.Windows.Forms.Button btnBusquedaporEstado;
         private System.Windows.Forms.Button btnBusquedaporTotalPrincipal;
         private System.Windows.Forms.Button btnBusquedaporTotaldeInteres;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEstado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMontodelPrestamo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInteres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFechadePago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFechadeVencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMontodePagar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblAños;
@@ -302,5 +311,10 @@ namespace Presentation
         private System.Windows.Forms.NumericUpDown nudTerminos;
         private System.Windows.Forms.NumericUpDown nudTasas;
         private System.Windows.Forms.NumericUpDown nudPrestamos;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.NumericUpDown nudCuota;
+        private System.Windows.Forms.Label lblCuota;
+        private System.Windows.Forms.Label lblFechaDePago;
+        private System.Windows.Forms.DateTimePicker dtpFechaDePago;
     }
 }

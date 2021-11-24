@@ -23,14 +23,20 @@ namespace Presentation
         {
             decimal n, p;
             n = nudTasas.Value/ 100;
-            p = nudTerminos.Value / 12;
+            p = nudTerminos.Value * 12;
             CalendarioPrest a = new CalendarioPrest()
             {
+                Id = calendarioRepos.GetLastIndex(),
                 Principal = nudPrestamos.Value*(1+n)/p,
                 Interes = (nudPrestamos.Value*n)/p,
+                Estado = Domain.Enums.Estado.Pendiente,
+                Cuota = nudCuota.Value,
+                FechaPago = dtpFechaDePago.Value
+               
             };
             calendarioRepos.Create(a);
-            dataGridView1.DataSource = calendarioRepos.GetAll();
+            dgvDatos.DataSource = null;
+            dgvDatos.DataSource = calendarioRepos.GetAll();
         }
     }
 }
