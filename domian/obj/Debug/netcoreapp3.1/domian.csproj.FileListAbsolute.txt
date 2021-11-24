@@ -1,0 +1,10 @@
+C:\Users\Josue\Source\Repos\Prueba2\domian\bin\Debug\netcoreapp3.1\domian.deps.json
+C:\Users\Josue\Source\Repos\Prueba2\domian\bin\Debug\netcoreapp3.1\domian.dll
+C:\Users\Josue\Source\Repos\Prueba2\domian\bin\Debug\netcoreapp3.1\domian.pdb
+C:\Users\Josue\Source\Repos\Prueba2\domian\obj\Debug\netcoreapp3.1\domian.csproj.AssemblyReference.cache
+C:\Users\Josue\Source\Repos\Prueba2\domian\obj\Debug\netcoreapp3.1\domian.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Josue\Source\Repos\Prueba2\domian\obj\Debug\netcoreapp3.1\domian.AssemblyInfoInputs.cache
+C:\Users\Josue\Source\Repos\Prueba2\domian\obj\Debug\netcoreapp3.1\domian.AssemblyInfo.cs
+C:\Users\Josue\Source\Repos\Prueba2\domian\obj\Debug\netcoreapp3.1\domian.csproj.CoreCompileInputs.cache
+C:\Users\Josue\Source\Repos\Prueba2\domian\obj\Debug\netcoreapp3.1\domian.dll
+C:\Users\Josue\Source\Repos\Prueba2\domian\obj\Debug\netcoreapp3.1\domian.pdb

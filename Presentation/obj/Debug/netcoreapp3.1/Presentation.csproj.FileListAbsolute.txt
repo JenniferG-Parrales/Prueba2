@@ -1,0 +1,16 @@
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.csproj.AssemblyReference.cache
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.FrmPrestamo.resources
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.csproj.GenerateResource.cache
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.AssemblyInfoInputs.cache
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.AssemblyInfo.cs
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\bin\Debug\netcoreapp3.1\Presentation.exe
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\bin\Debug\netcoreapp3.1\Presentation.deps.json
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\bin\Debug\netcoreapp3.1\Presentation.runtimeconfig.json
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\bin\Debug\netcoreapp3.1\Presentation.runtimeconfig.dev.json
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\bin\Debug\netcoreapp3.1\Presentation.dll
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\bin\Debug\netcoreapp3.1\Presentation.pdb
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.dll
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.pdb
+C:\Users\Josue\Source\Repos\Prueba2\Presentation\obj\Debug\netcoreapp3.1\Presentation.genruntimeconfig.cache
