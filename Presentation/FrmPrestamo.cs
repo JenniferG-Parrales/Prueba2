@@ -30,9 +30,13 @@ namespace Presentation
                 Principal = nudPrestamos.Value*(1+n)/p,
                 Interes = (nudPrestamos.Value*n)/p,
                 Estado = Domain.Enums.Estado.Pendiente,
-                Cuota = nudCuota.Value,
-                FechaPago = dtpFechaDePago.Value
-               
+                CuotaPagado = nudCuota.Value,
+                FechaPago = dtpFechaDePago.Value,
+                FechaVencimiento = dtpFechaVencimiento.Value,
+                PrincipalPagado = nudCuota.Value,
+                Cuota = (nudPrestamos.Value + (nudPrestamos.Value * (n))) / (p)
+
+
             };
             calendarioRepos.Create(a);
             dgvDatos.DataSource = null;

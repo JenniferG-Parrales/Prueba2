@@ -33,28 +33,25 @@ namespace Presentation
             this.lblInteres = new System.Windows.Forms.Label();
             this.lblTerminos = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnBusquedaporEstado = new System.Windows.Forms.Button();
-            this.btnBusquedaporTotalPrincipal = new System.Windows.Forms.Button();
-            this.btnBusquedaporTotaldeInteres = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nudCuota = new System.Windows.Forms.NumericUpDown();
+            this.lblCuota = new System.Windows.Forms.Label();
+            this.lblFechaDePago = new System.Windows.Forms.Label();
+            this.dtpFechaDePago = new System.Windows.Forms.DateTimePicker();
             this.lblAños = new System.Windows.Forms.Label();
             this.lblPorcentaje = new System.Windows.Forms.Label();
             this.nudTerminos = new System.Windows.Forms.NumericUpDown();
             this.nudTasas = new System.Windows.Forms.NumericUpDown();
             this.nudPrestamos = new System.Windows.Forms.NumericUpDown();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.dtpFechaDePago = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaDePago = new System.Windows.Forms.Label();
-            this.lblCuota = new System.Windows.Forms.Label();
-            this.nudCuota = new System.Windows.Forms.NumericUpDown();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpFechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCuota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTerminos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTasas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrestamos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCuota)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPrestamos
@@ -94,45 +91,10 @@ namespace Presentation
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnBusquedaporEstado
-            // 
-            this.btnBusquedaporEstado.Location = new System.Drawing.Point(3, 3);
-            this.btnBusquedaporEstado.Name = "btnBusquedaporEstado";
-            this.btnBusquedaporEstado.Size = new System.Drawing.Size(120, 67);
-            this.btnBusquedaporEstado.TabIndex = 7;
-            this.btnBusquedaporEstado.Text = "Busqueda por Estado";
-            this.btnBusquedaporEstado.UseVisualStyleBackColor = true;
-            // 
-            // btnBusquedaporTotalPrincipal
-            // 
-            this.btnBusquedaporTotalPrincipal.Location = new System.Drawing.Point(248, 3);
-            this.btnBusquedaporTotalPrincipal.Name = "btnBusquedaporTotalPrincipal";
-            this.btnBusquedaporTotalPrincipal.Size = new System.Drawing.Size(118, 67);
-            this.btnBusquedaporTotalPrincipal.TabIndex = 8;
-            this.btnBusquedaporTotalPrincipal.Text = "Busqueda por Total Principal";
-            this.btnBusquedaporTotalPrincipal.UseVisualStyleBackColor = true;
-            // 
-            // btnBusquedaporTotaldeInteres
-            // 
-            this.btnBusquedaporTotaldeInteres.Location = new System.Drawing.Point(129, 3);
-            this.btnBusquedaporTotaldeInteres.Name = "btnBusquedaporTotaldeInteres";
-            this.btnBusquedaporTotaldeInteres.Size = new System.Drawing.Size(113, 67);
-            this.btnBusquedaporTotaldeInteres.TabIndex = 9;
-            this.btnBusquedaporTotaldeInteres.Text = "Busqueda por Total de Interes";
-            this.btnBusquedaporTotaldeInteres.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnBusquedaporEstado);
-            this.flowLayoutPanel1.Controls.Add(this.btnBusquedaporTotaldeInteres);
-            this.flowLayoutPanel1.Controls.Add(this.btnBusquedaporTotalPrincipal);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 305);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(377, 78);
-            this.flowLayoutPanel1.TabIndex = 11;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpFechaVencimiento);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.nudCuota);
             this.groupBox1.Controls.Add(this.lblCuota);
             this.groupBox1.Controls.Add(this.lblFechaDePago);
@@ -151,6 +113,53 @@ namespace Presentation
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // nudCuota
+            // 
+            this.nudCuota.Location = new System.Drawing.Point(406, 75);
+            this.nudCuota.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudCuota.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCuota.Name = "nudCuota";
+            this.nudCuota.Size = new System.Drawing.Size(120, 23);
+            this.nudCuota.TabIndex = 18;
+            this.nudCuota.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblCuota
+            // 
+            this.lblCuota.AutoSize = true;
+            this.lblCuota.Location = new System.Drawing.Point(280, 77);
+            this.lblCuota.Name = "lblCuota";
+            this.lblCuota.Size = new System.Drawing.Size(42, 15);
+            this.lblCuota.TabIndex = 17;
+            this.lblCuota.Text = "Cuota:";
+            // 
+            // lblFechaDePago
+            // 
+            this.lblFechaDePago.AutoSize = true;
+            this.lblFechaDePago.Location = new System.Drawing.Point(280, 19);
+            this.lblFechaDePago.Name = "lblFechaDePago";
+            this.lblFechaDePago.Size = new System.Drawing.Size(88, 15);
+            this.lblFechaDePago.TabIndex = 16;
+            this.lblFechaDePago.Text = "Fecha De Pago:";
+            // 
+            // dtpFechaDePago
+            // 
+            this.dtpFechaDePago.Location = new System.Drawing.Point(406, 13);
+            this.dtpFechaDePago.Name = "dtpFechaDePago";
+            this.dtpFechaDePago.Size = new System.Drawing.Size(200, 23);
+            this.dtpFechaDePago.TabIndex = 15;
             // 
             // lblAños
             // 
@@ -222,55 +231,24 @@ namespace Presentation
             this.dgvDatos.Location = new System.Drawing.Point(12, 136);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.RowTemplate.Height = 25;
-            this.dgvDatos.Size = new System.Drawing.Size(757, 150);
+            this.dgvDatos.Size = new System.Drawing.Size(757, 226);
             this.dgvDatos.TabIndex = 13;
             // 
-            // dtpFechaDePago
+            // label1
             // 
-            this.dtpFechaDePago.Location = new System.Drawing.Point(371, 13);
-            this.dtpFechaDePago.Name = "dtpFechaDePago";
-            this.dtpFechaDePago.Size = new System.Drawing.Size(200, 23);
-            this.dtpFechaDePago.TabIndex = 15;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(280, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 15);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Fecha De Vencimiento:";
             // 
-            // lblFechaDePago
+            // dtpFechaVencimiento
             // 
-            this.lblFechaDePago.AutoSize = true;
-            this.lblFechaDePago.Location = new System.Drawing.Point(280, 19);
-            this.lblFechaDePago.Name = "lblFechaDePago";
-            this.lblFechaDePago.Size = new System.Drawing.Size(88, 15);
-            this.lblFechaDePago.TabIndex = 16;
-            this.lblFechaDePago.Text = "Fecha De Pago:";
-            // 
-            // lblCuota
-            // 
-            this.lblCuota.AutoSize = true;
-            this.lblCuota.Location = new System.Drawing.Point(280, 48);
-            this.lblCuota.Name = "lblCuota";
-            this.lblCuota.Size = new System.Drawing.Size(42, 15);
-            this.lblCuota.TabIndex = 17;
-            this.lblCuota.Text = "Cuota:";
-            // 
-            // nudCuota
-            // 
-            this.nudCuota.Location = new System.Drawing.Point(371, 46);
-            this.nudCuota.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nudCuota.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudCuota.Name = "nudCuota";
-            this.nudCuota.Size = new System.Drawing.Size(120, 23);
-            this.nudCuota.TabIndex = 18;
-            this.nudCuota.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(406, 42);
+            this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(200, 23);
+            this.dtpFechaVencimiento.TabIndex = 20;
             // 
             // FrmPrestamo
             // 
@@ -279,18 +257,16 @@ namespace Presentation
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnAgregar);
             this.Name = "FrmPrestamo";
             this.Text = "FrmPrestamo";
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCuota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTerminos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTasas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrestamos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCuota)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,10 +277,6 @@ namespace Presentation
         private System.Windows.Forms.Label lblInteres;
         private System.Windows.Forms.Label lblTerminos;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnBusquedaporEstado;
-        private System.Windows.Forms.Button btnBusquedaporTotalPrincipal;
-        private System.Windows.Forms.Button btnBusquedaporTotaldeInteres;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblAños;
         private System.Windows.Forms.Label lblPorcentaje;
@@ -316,5 +288,7 @@ namespace Presentation
         private System.Windows.Forms.Label lblCuota;
         private System.Windows.Forms.Label lblFechaDePago;
         private System.Windows.Forms.DateTimePicker dtpFechaDePago;
+        private System.Windows.Forms.DateTimePicker dtpFechaVencimiento;
+        private System.Windows.Forms.Label label1;
     }
 }
