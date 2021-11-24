@@ -1,3 +1,6 @@
+using Autofac;
+using Domain.Interfaces;
+using Infraestructura;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +20,11 @@ namespace Presentation
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrestamo());
+            var builder = new ContainerBuilder();
+
+            builder.RegisterType<CalendarioModel>().As<ICalendarioRepos>();
+            var container = builder.Build();
+            Application.Run(new FrmPrestamo(container.Resolve<ICalendarioRepos>()));
         }
     }
 }

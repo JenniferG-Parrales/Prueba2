@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "R6WXjnjV/m3SgRHqWS6XfqFZBSuLeWLrRFI2kOOuovIGnxxxyBAmc33axL6mDcnq6Axv3pMzOYlfvFEO78MW/w==",
+  "dgSpecHash": "/nemhGnTKdX5bQlSX5yOiF/iradbWSJ9gHAfXGSa/eONzLmPZXsmiiSmQ9n8igDjH7K5y3s2jgHhcWYSvjMCiQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Josue\\source\\repos\\Prueba2\\Infraestructura\\Infraestructura.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Josue\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Josue\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Josue\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Josue\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Josue\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\Josue\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
